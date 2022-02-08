@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.main.tab.fragment.TokenFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/input_layout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:paddingHorizontal="15dp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline2">
+
+        <EditText
+            android:id="@+id/stuNo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:ems="10"
+            android:hint="输入学号/工号"
+            android:inputType="number"
+            app:layout_constraintBottom_toTopOf="@+id/stuPwd"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/stuPwd"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:ems="10"
+            android:hint="输入密码"
+            android:inputType="textPassword"
+            app:layout_constraintBottom_toTopOf="@+id/button"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/stuNo" />
+
+        <com.qmuiteam.qmui.layout.QMUIButton
+            android:id="@+id/button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="生成Token并复制"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/stuPwd"
+            tools:layout_editor_absoluteX="10dp" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.1" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.38" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:text="Token生成"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/token"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/input_layout"
+        tools:text="eyJhbGciOiJSUzUxMiJ9.eyJBVFRSX3VzZXJObyI6IjE5MTQwNDA2MDIyNSIsInN1YiI6IjE5MTQwNDA2MDIyNSIsImlzcyI6InRva2VuLmhhdXN0LmVkdS5jbiIsImRldmljZUlkIjoiIiwiQVRUUl9pZGVudGl0eVR5cGVJZCI6IlMwMSIsIkFUVFJfYWNjb3VudElkIjoiNTFlODNmMjBjMmJiMTFlYmFlYTUzM2I1NmM0NzYzNjgiLCJBVFRSX3VzZXJJZCI6IjUxZDhhZWMwYzJiYjExZWJhZWE1MzNiNTZjNDc2MzY4IiwiQVRUUl9pZGVudGl0eVR5cGVDb2RlIjoiUzAxIiwiQVRUUl9pZGVudGl0eVR5cGVOYW1lIjoi5pys56eR55SfIiwiQVRUUl9vcmdhbml6YXRpb25OYW1lIjoi6K6h566X5py6MTkyIiwiQVRUUl91c2VyTmFtZSI6IueOi-WumumCpiIsImV4cCI6MTY0NjgxNDQ4MSwiQVRUUl9vcmdhbml6YXRpb25JZCI6IjE5MTQwNDA2MDIiLCJpYXQiOjE2NDQyMjI0ODEsImp0aSI6IklkLVRva2VuLU1RM0hESWdsYjMyY3NOMm4iLCJyZXEiOiJjb20ubGFudHUuTW9iaWxlQ2FtcHVzLmhhdXN0IiwiQVRUUl9vcmdhbml6YXRpb25Db2RlIjoiMTkxNDA0MDYwMiJ9.itTIaofVeb_Q3SF6XPIwlzwThPtGlIrX3VEHZP8CvqDSgRFvv4fAVebyd9iMNfhpOS8k1yYnDIiDZHXOzUBEWN6FhEAchCeDxMwMyDx1AODRVrpBxSWQHNjXtRYbnifOeOaMiWc0CBjnnd2GROdFC3w2r--tvn7VMD1rF2-XgF3FhbPZv6lTabrtdRbAa-1KUvKoZhR8CApm8w8XP2tAuLVVqYU99gB-pgx4JG2qtsGGitW7uVwgbvVRZkoA3zqi5HctzP88IRIvXCWKuRFIALzmuU0xEyyaEyVyqXcrAX7yUtnkIAlkZ-eWws6HYHS0qsOtXSfnG78pddiyC" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

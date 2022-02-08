@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.qmuiteam.qmui.widget.QMUIWindowInsetLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <com.qmuiteam.qmui.layout.QMUIConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.qmuiteam.qmui.widget.tab.QMUITabSegment
+            android:id="@+id/tab_segment"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/topbar"
+            app:qmui_tab_has_indicator="true"
+            app:qmui_tab_indicator_with_follow_content="true"
+            app:qmui_tab_mode="fixed"
+            tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck">
+
+        </com.qmuiteam.qmui.widget.tab.QMUITabSegment>
+
+        <com.qmuiteam.qmui.widget.QMUIViewPager
+            android:id="@+id/viewpager"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:padding="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tab_segment"
+            tools:ignore="SpeakableTextPresentCheck">
+
+        </com.qmuiteam.qmui.widget.QMUIViewPager>
+
+        <com.qmuiteam.qmui.widget.QMUITopBarLayout
+            android:id="@+id/topbar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/topbar_height"
+            android:fitsSystemWindows="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+        </com.qmuiteam.qmui.widget.QMUITopBarLayout>
+
+        <ImageView
+            android:id="@+id/btn_more"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginRight="5dp"
+            android:padding="5dp"
+            app:layout_constraintEnd_toEndOf="@+id/tab_segment"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/more" />
+
+    </com.qmuiteam.qmui.layout.QMUIConstraintLayout>
+
+</com.qmuiteam.qmui.widget.QMUIWindowInsetLayout>
